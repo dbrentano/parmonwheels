@@ -377,6 +377,93 @@ header.nav.hide-header {
 }
 /* ---------------- END WELCOME SECTION ---------------- */
 
+/* ---------------- SERVICE SECTION ---------------- */
+.service-area {
+    text-align: center;
+        padding: 0rem 1rem 4rem;
+        color: #9A2C00;
+        max-width: 1100px;
+        margin: 0 auto;
+        font-family: 'Montserrat', sans-serif;
+}
+
+.service-area h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        margin-top: 0px;
+}
+
+.service-area p {
+    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.service-map {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-banner {
+    display: block;
+    background-color: var(--page-bg);
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 90px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-banner-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollBanner 20s linear infinite;
+}
+
+.menu-banner span {
+    color: #9A2C00;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0 50px;
+    display: inline-block;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.menu-banner:hover .menu-banner-track {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .service-area h2 {
+        margin-top: -20px;
+    }
+
+    .menu-banner {
+        margin-top: 60px;
+    }
+
+    .menu-banner span {
+        font-size: 1.25rem;
+        margin-right: -20px;
+    }
+}
+/* ---------------- END SERVICE SECTION ---------------- */
+
 /* ---------------- FOOTER ---------------- */
 .footer {
     background: var(--header-bg);
