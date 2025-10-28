@@ -520,6 +520,10 @@ header.nav.hide-header {
         position: relative;
     }
 
+    .mobile-footer-accordion summary::-webkit-details-marker {
+            display: none;
+    }
+
     /* Chevron icon */
     .mobile-footer-accordion summary::after {
         content: "▾";
