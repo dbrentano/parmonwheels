@@ -363,7 +363,7 @@ header.nav.hide-header {
 
     .welcome-images {
         flex-direction: row;
-        gap: 1rem;
+        gap: 10px;
     }
     .welcome-images img {
         width: 100%;
