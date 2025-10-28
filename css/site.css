@@ -280,21 +280,30 @@ header.nav.hide-header {
     color: #1b1406;
 }
 
+.hero-title-mobile {
+    display: none;
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+    .hero-title-mobile {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 0px;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    .hero-title {
+        display: none;
+    }   
 
     .hero {
         height: 80vh;
     }
 
-    .hero-title {
-        font-size: 1.75rem;
-        margin-top: 0px;
-        font-weight: 600;
-    }
-
     .hero-subtext {
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: 400;
         margin-top: 0px;
         margin-bottom: 150px;
