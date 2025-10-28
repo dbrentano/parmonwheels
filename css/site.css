@@ -314,10 +314,11 @@ header.nav.hide-header {
     font-family: 'Montserrat', sans-serif;
 }
 
-.welcome-section h2 {
+.welcome-title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
     margin-bottom: 1rem;
+    margin-top: -50px;
 }
 
 .welcome-section p {
@@ -331,7 +332,7 @@ header.nav.hide-header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 8rem;
 }
 
 .welcome-images img {
@@ -340,15 +341,33 @@ header.nav.hide-header {
     border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+.welcome-title-mobile {
+    display: none;
+}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+    .welcome-title {
+        display: none;
+    }
+    .welcome-title-mobile {
+        display: block;
+        margin-top: -30px;
+        line-height: 35px
+    }
     .welcome-section {
         padding: 4rem 1rem;
     }
 
     .welcome-images {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .welcome-images img {
+        width: 100%;
+        max-width: 175px;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 }
 /* ---------------- END WELCOME SECTION ---------------- */
