@@ -216,6 +216,7 @@ header.nav.hide-header {
         bottom: -60px;
     }
 }
+
 /* ---------------- END HEADER ---------------- */
 
 /* ---------------- HERO SECTION ---------------- */
@@ -283,6 +284,7 @@ header.nav.hide-header {
 .hero-title-mobile {
     display: none;
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
@@ -296,7 +298,7 @@ header.nav.hide-header {
 
     .hero-title {
         display: none;
-    }   
+    }
 
     .hero {
         height: 80vh;
@@ -313,6 +315,7 @@ header.nav.hide-header {
         font-size: 1.2rem;
     }
 }
+
 /* ---------------- END HERO SECTION ---------------- */
 
 /* ---------------- WELCOME SECTION ---------------- */
@@ -356,6 +359,7 @@ header.nav.hide-header {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     object-fit: cover;
 }
+
 .welcome-title-mobile {
     display: none;
 }
@@ -365,11 +369,13 @@ header.nav.hide-header {
     .welcome-title {
         display: none;
     }
+
     .welcome-title-mobile {
         display: block;
         margin-top: -30px;
         line-height: 35px
     }
+
     .welcome-section {
         padding: 4rem 1rem;
     }
@@ -377,6 +383,7 @@ header.nav.hide-header {
     .welcome-images {
         gap: 10px;
     }
+
     .welcome-images img {
         width: 50%;
         max-width: 150px;
@@ -384,23 +391,24 @@ header.nav.hide-header {
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 }
+
 /* ---------------- END WELCOME SECTION ---------------- */
 
 /* ---------------- SERVICE SECTION ---------------- */
 .service-area {
     text-align: center;
-        padding: 0rem 1rem 4rem;
-        color: #9A2C00;
-        max-width: 1100px;
-        margin: 0 auto;
-        font-family: 'Montserrat', sans-serif;
+    padding: 0rem 1rem 4rem;
+    color: #9A2C00;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .service-area h2 {
     font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 600;
-        margin-bottom: 1rem;
-        margin-top: 0px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 0px;
 }
 
 .service-area p {
@@ -471,6 +479,7 @@ header.nav.hide-header {
         margin-right: -20px;
     }
 }
+
 /* ---------------- END SERVICE SECTION ---------------- */
 
 /* ---------------- SOCIAL SECTION ---------------- */
@@ -483,9 +492,9 @@ header.nav.hide-header {
 
 .social-section h2 {
     font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 600;
-        margin-bottom: 60px;
-        margin-top: 0px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    margin-top: 0px;
 }
 
 @media (max-width: 768px) {
@@ -502,8 +511,9 @@ header.nav.hide-header {
         font-weight: 600;
         margin-bottom: 20px;
         margin-top: 0px;
-    } 
+    }
 }
+
 /* ---------------- END SOCIAL SECTION ---------------- */
 
 /* ---------------- REVIEW SECTION ---------------- */
@@ -649,6 +659,7 @@ header.nav.hide-header {
         margin-top: -20px;
         margin-bottom: 30px;
     }
+
     .footer-inner {
         display: none;
         /* hide desktop layout on mobile */
@@ -677,7 +688,7 @@ header.nav.hide-header {
     }
 
     .mobile-footer-accordion summary::-webkit-details-marker {
-            display: none;
+        display: none;
     }
 
     /* Chevron icon */
@@ -696,13 +707,14 @@ header.nav.hide-header {
         transform: translateY(-50%) rotate(180deg);
     }
 
-    .mobile-footer-nav{
+    .mobile-footer-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
         padding-bottom: 16px;
     }
+
     .mobile-footer-contact {
         display: flex;
         flex-direction: column;
@@ -735,6 +747,7 @@ header.nav.hide-header {
         text-align: center;
     }
 }
+
 /* ---------------- END FOOTER ---------------- */
 
 /*MENU PAGE START*/
@@ -809,3 +822,191 @@ header.nav.hide-header {
 }
 
 /*MENU PAGE END*/
+
+/*START HOW IT WORKS PAGE*/
+
+.how-it-works-section {
+    background: var(--page-bg);
+    padding: 150px 40px 100px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark, #2a1c0d);
+}
+
+.how-it-works-section h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--header-bg);
+}
+
+.how-step {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: left;
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.how-step h2 {
+    color: var(--header-bg);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.how-step p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.how-menu-btn {
+    display: inline-block;
+    background: var(--header-bg);
+    color: #fff;
+    padding: 16px 90px;
+    border-radius: 30px / 30px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 40px;
+}
+
+.how-menu-btn:hover {
+    background: var(--accent);
+    color: #1b1406;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 0px 20px 80px;
+    }
+
+    .how-step {
+        padding: 30px 20px;
+    }
+
+    .how-it-works-section h1 {
+        font-size: 2.3rem;
+        margin-bottom: 40px;
+    }
+}
+
+/*END HOW IT WORKS PAGE*/
+
+/* ABOUT US PAGE START */
+.about-section {
+    background: var(--page-bg);
+    padding: 150px 40px 100px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark, #2a1c0d);
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--header-bg);
+}
+
+.about-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    padding: 50px 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--header-bg);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h2 {
+    color: var(--header-bg);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.about-role {
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.about-btn {
+    display: inline-block;
+    background: var(--header-bg);
+    color: #fff;
+    padding: 16px 60px;
+    border-radius: 30px / 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-btn:hover {
+    background: var(--accent);
+    color: #1b1406;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 0px 20px 80px;
+    }
+
+    .about-section h1 {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+
+    .about-card {
+        padding: 40px 25px;
+    }
+
+    .about-image {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+    }
+
+    .about-btn {
+        font-size: 1rem;
+    }
+}
+
+/* ABOUT US PAGE END */
