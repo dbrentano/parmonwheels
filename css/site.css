@@ -540,12 +540,18 @@ header.nav.hide-header {
         transform: translateY(-50%) rotate(180deg);
     }
 
-    .mobile-footer-nav,
+    .mobile-footer-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 16px;
+    }
     .mobile-footer-contact {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 0px;
         padding-bottom: 16px;
     }
 
