@@ -333,15 +333,19 @@ header.nav.hide-header {
 .welcome-images {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 8rem;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .welcome-images img {
-    width: 100%;
+    width: 45%;
+    height: auto;
     max-width: 450px;
     border-radius: 10px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
 }
 .welcome-title-mobile {
     display: none;
@@ -362,12 +366,11 @@ header.nav.hide-header {
     }
 
     .welcome-images {
-        flex-direction: row;
         gap: 10px;
     }
     .welcome-images img {
-        width: 100%;
-        max-width: 175px;
+        width: 50%;
+        max-width: 150px;
         border-radius: 10px;
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
