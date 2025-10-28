@@ -931,7 +931,7 @@ header.nav.hide-header {
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     padding: 50px 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--header-bg);
+    color: black;
 }
 
 .about-card:hover {
