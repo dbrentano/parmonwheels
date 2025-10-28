@@ -1,3 +1,27 @@
+// ------------------- LOAD HEADER & FOOTER -------------------
+async function loadPartials() {
+    try {
+        const [headerRes, footerRes] = await Promise.all([
+            fetch("/templates/header.html"),
+            fetch("/templates/footer.html")
+        ]);
+
+        if (!headerRes.ok || !footerRes.ok) throw new Error("Missing partials");
+
+        const [headerHTML, footerHTML] = await Promise.all([
+            headerRes.text(),
+            footerRes.text()
+        ]);
+
+        document.body.insertAdjacentHTML("afterbegin", headerHTML);
+        document.body.insertAdjacentHTML("beforeend", footerHTML);
+
+        initHeaderScripts(); // reinit header once loaded
+    } catch (err) {
+        console.error("Error loading partials:", err);
+    }
+}
+
 // ------------------- HEADER SCROLL BEHAVIOR -------------------
 function initHeaderScripts() {
     let lastScrollY = window.scrollY;
@@ -52,4 +76,4 @@ function initHeaderScripts() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', initHeaderScripts);
+document.addEventListener('DOMContentLoaded', loadPartials);
