@@ -376,3 +376,197 @@ header.nav.hide-header {
     }
 }
 /* ---------------- END WELCOME SECTION ---------------- */
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    background: #9A2C00;
+    color: #fff;
+    padding: 60px 0 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 180px;
+    /* controls spacing between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --------- Left: Logo --------- */
+.footer-brand {
+    flex: 0 0 auto;
+    text-align: left;
+}
+
+.footer-logo {
+    height: 130px;
+    width: auto;
+    display: block;
+    margin-top: 40px;
+}
+
+/* --------- Center: Navigation --------- */
+.footer-nav-wrapper {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.footer-nav-wrapper h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: opacity 0.25s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 0.8;
+}
+
+/* --------- Right: Contact --------- */
+.footer-contact {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.footer-contact h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Instagram image icon */
+.footer-social {
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.footer-social img {
+    width: 70px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.04);
+}
+
+/* --------- Copyright --------- */
+.footer-copy {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.65rem;
+    opacity: 0.9;
+}
+
+/* --------- Mobile Accordion --------- */
+.mobile-footer-accordion {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .footer-inner {
+        display: none;
+        /* hide desktop layout on mobile */
+    }
+
+    .mobile-footer-accordion {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #9A2C00;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .mobile-footer-accordion details {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .mobile-footer-accordion summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 16px 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        position: relative;
+    }
+
+    /* Chevron icon */
+    .mobile-footer-accordion summary::after {
+        content: "▾";
+        position: absolute;
+        right: 12%;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transition: transform 0.2s ease;
+        opacity: 0.8;
+        font-size: 1.4rem;
+    }
+
+    .mobile-footer-accordion details[open] summary::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .mobile-footer-nav,
+    .mobile-footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 16px;
+    }
+
+    .mobile-footer-nav a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .mobile-footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .mobile-footer-contact a:hover {
+        text-decoration: underline;
+    }
+
+    .mobile-footer-contact img {
+        width: 40px;
+        margin-top: 8px;
+    }
+
+    .footer-copy {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+/* ---------------- END FOOTER ---------------- */
