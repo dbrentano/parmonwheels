@@ -76,4 +76,32 @@ function initHeaderScripts() {
     }
 }
 
+async function loadInstagramFeed() {
+    const token = 'YOUR_INSTAGRAM_ACCESS_TOKEN'; // replace with your token
+    const limit = 6; // number of posts to display
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,thumbnail_url,media_type&access_token=${token}&limit=${limit}`;
+
+    const container = document.getElementById('insta-feed');
+
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        container.innerHTML = data.data
+            .map(post => {
+                const img = post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url;
+                return `
+          <a href="${post.permalink}" target="_blank" class="insta-post">
+            <img src="${img}" alt="Instagram post" loading="lazy">
+          </a>
+        `;
+            })
+            .join('');
+    } catch (err) {
+        console.error('Error loading Instagram feed', err);
+        container.innerHTML = '<p>Unable to load posts at this time.</p>';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', loadPartials);
+document.addEventListener('DOMContentLoaded', loadInstagramFeed);

@@ -464,6 +464,59 @@ header.nav.hide-header {
 }
 /* ---------------- END SERVICE SECTION ---------------- */
 
+/* ---------------- SOCIAL SECTION ---------------- */
+.social-section {
+    background-color: var(--page-bg);
+    padding: 60px 300px;
+    text-align: center;
+    color: #9A2C00;
+}
+
+.social-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+        margin-bottom: 60px;
+        margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+    .social-section {
+        background-color: var(--page-bg);
+        padding: 0px 30px 20px;
+        text-align: center;
+        color: #9A2C00;
+        margin-top: -20px;
+    }
+
+    .social-section h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    } 
+}
+/* ---------------- END SOCIAL SECTION ---------------- */
+
+/* ---------------- REVIEW SECTION ---------------- */
+.review-section {
+    background-color: var(--page-bg);
+    padding: 60px 300px;
+    text-align: center;
+    color: #9A2C00;
+}
+
+@media (max-width: 768px) {
+    .review-section {
+        background-color: var(--page-bg);
+        padding: 0px 30px 20px;
+        text-align: center;
+        color: #9A2C00;
+        margin-top: 60px;
+    }
+}
+
+/* ---------------- END REVIEW SECTION ---------------- */
+
 /* ---------------- FOOTER ---------------- */
 .footer {
     background: var(--header-bg);
