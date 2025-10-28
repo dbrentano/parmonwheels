@@ -379,7 +379,7 @@ header.nav.hide-header {
 
 /* ---------------- FOOTER ---------------- */
 .footer {
-    background: #9A2C00;
+    background: var(--header-bg);
     color: #fff;
     padding: 60px 0 30px;
     font-family: 'Montserrat', sans-serif;
@@ -502,7 +502,7 @@ header.nav.hide-header {
         display: block;
         width: 100%;
         text-align: center;
-        background: #9A2C00;
+        background: var(--header-bg);
         color: #fff;
         font-family: 'Montserrat', sans-serif;
     }
@@ -560,12 +560,12 @@ header.nav.hide-header {
     }
 
     .mobile-footer-contact img {
-        width: 40px;
+        width: 60px;
         margin-top: 8px;
     }
 
     .footer-copy {
-        margin-top: 30px;
+        margin-top: 50px;
         text-align: center;
     }
 }
