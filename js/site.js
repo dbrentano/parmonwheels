@@ -76,32 +76,46 @@ function initHeaderScripts() {
     }
 }
 
-async function loadInstagramFeed() {
-    const token = 'YOUR_INSTAGRAM_ACCESS_TOKEN'; // replace with your token
-    const limit = 6; // number of posts to display
-    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink,thumbnail_url,media_type&access_token=${token}&limit=${limit}`;
-
-    const container = document.getElementById('insta-feed');
-
-    try {
-        const res = await fetch(url);
-        const data = await res.json();
-
-        container.innerHTML = data.data
-            .map(post => {
-                const img = post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url;
-                return `
-          <a href="${post.permalink}" target="_blank" class="insta-post">
-            <img src="${img}" alt="Instagram post" loading="lazy">
-          </a>
-        `;
-            })
-            .join('');
-    } catch (err) {
-        console.error('Error loading Instagram feed', err);
-        container.innerHTML = '<p>Unable to load posts at this time.</p>';
-    }
-}
-
 document.addEventListener('DOMContentLoaded', loadPartials);
-document.addEventListener('DOMContentLoaded', loadInstagramFeed);
+
+// ------------------- VIDEO CONTROLS -------------------
+// ------------------- VIDEO CONTROLS (always hide on play, show on pause) -------------------
+(function initVideoOverlay() {
+    const containers = document.querySelectorAll('.video-container');
+    if (!containers.length) return;
+
+    const pauseOthers = (except) => {
+        document.querySelectorAll('.video-player').forEach(v => {
+            if (v !== except) {
+                v.pause();
+                const b = v.closest('.video-container')?.querySelector('.play-btn');
+                if (b) b.classList.remove('hidden');
+            }
+        });
+    };
+
+    containers.forEach(container => {
+        const video = container.querySelector('.video-player');
+        const btn = container.querySelector('.play-btn');
+        if (!video || !btn) return;
+
+        // Clicking play button starts video
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            pauseOthers(video);
+            video.play().then(() => btn.classList.add('hidden'));
+        });
+
+        // When video starts playing (no matter how)
+        video.addEventListener('play', () => {
+            pauseOthers(video);
+            btn.classList.add('hidden');
+        });
+
+        // When paused or ended (no matter how)
+        video.addEventListener('pause', () => btn.classList.remove('hidden'));
+        video.addEventListener('ended', () => btn.classList.remove('hidden'));
+    });
+})();
+
+

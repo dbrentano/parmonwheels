@@ -900,10 +900,10 @@ header.nav.hide-header {
         margin-bottom: 40px;
     }
 
-        .how-menu-btn {
-            font-size: .9rem;
-            padding: 16px 80px;
-        }
+    .how-menu-btn {
+        font-size: .9rem;
+        padding: 16px 80px;
+    }
 }
 
 /*END HOW IT WORKS PAGE*/
@@ -1055,14 +1055,13 @@ header.nav.hide-header {
 }
 
 /* VIDEOS SECTION */
+/* --- VIDEO GRID --- */
 .videos-section {
     background: var(--page-bg);
     padding: 0px 5% 100px;
     text-align: center;
-    margin-top: -70px;
 }
 
-/* GRID LAYOUT */
 .videos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1070,19 +1069,55 @@ header.nav.hide-header {
     justify-items: center;
 }
 
-/* VIDEO PLAYER STYLING */
-.video-player {
+/* VIDEO PLAYER + CUSTOM BUTTON */
+.video-container {
+    position: relative;
     width: 100%;
     max-width: 560px;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    outline: none;
+}
+
+.video-player {
+    width: 100%;
+    display: block;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-player:hover {
+.video-container:hover .video-player {
     transform: scale(1.02);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* PLAY/PAUSE OVERLAY */
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-btn.hidden {
+    display: none;
 }
 
 /* MOBILE OPTIMIZATION */
@@ -1107,15 +1142,17 @@ header.nav.hide-header {
     }
 
     .videos-section {
-        padding: 80px 20px 40px;
+        padding: 0px 20px 40px;
     }
 
     .videos-grid {
-        gap: 25px;
+        gap: 30px;
     }
 
-    .video-player {
-        max-width: 100%;
+    .play-btn {
+        font-size: 48px;
+        width: 70px;
+        height: 70px;
     }
 }
 
