@@ -1232,6 +1232,23 @@ header.nav.hide-header {
     font-style: italic;
 }
 
+.thankyou-instagram {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.thankyou-instagram-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.thankyou-instagram-img:hover {
+    transform: scale(1.1);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .contact {
