@@ -15,50 +15,55 @@
     <section class="section contact">
         <div class="container">
             <div class="card">
-                <form name="Parm on Wheels Contact Form" method="POST" data-netlify="true">
+                <form name="Parm on Wheels Contact Form" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
                     <input type="hidden" name="form-name" value="Parm on Wheels Contact Form" />
-                    <p style="display:none"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                    <p style="display:none"><label>Don’t fill this out if you’re human: <input
+                                name="bot-field" /></label>
                     </p>
-    
-                    <h1 class="contact-title">Get in Touch</h1>
-                    <p class="contact-subtext">Tell us about your event, we’ll reply with next steps and availability.</p>
-    
-                    <div class="field">
-                        <label for="name">Full Name</label>
-                        <input id="name" name="name" type="text" required />
-                    </div>
-    
-                    <div class="field">
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required />
-                    </div>
-    
-                    <div class="field">
-                        <label for="phone">Phone</label>
-                        <input id="phone" name="phone" type="tel" required />
-                    </div>
+                    <div id="form-content">
+                        <h1 class="contact-title">Get in Touch</h1>
+                        <p class="contact-subtext">Tell us about your event, we’ll reply with next steps and
+                            availability.</p>
 
-                    <div class="field">
-                        <label for="services">Services Requested</label>
-                        <p class="field-note">*Please specify occasion in message (Graduation, Birthday, etc.)</p>
-                        <select id="services" name="services" required>
-                            <option value="">Select one...</option>
-                            <option>Special Occasion</option>
-                            <option>Private Dinner</option>
-                        </select>
+                        <div class="field">
+                            <label for="name">Full Name</label>
+                            <input id="name" name="name" type="text" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone</label>
+                            <input id="phone" name="phone" type="tel" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="services">Services Requested</label>
+                            <p class="field-note">*Please specify occasion in message (Graduation, Birthday, etc.)</p>
+                            <select id="services" name="services" required>
+                                <option value="">Select one...</option>
+                                <option>Special Occasion</option>
+                                <option>Private Dinner</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us about your event, date, or any special requests..."
+                                required></textarea>
+                        </div>
+
+                        <button class="btn" type="submit">Submit</button>
                     </div>
-    
-                    <div class="field">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"
-                            placeholder="Tell us about your event, date, or any special requests..." required></textarea>
-                    </div>
-    
-                    <button class="btn" type="submit">Submit</button>
-    
+                    
                     <p id="thank-you"
                         style="display:none; text-align:center; margin-top:20px; max-width:700px; margin-left:auto; margin-right:auto; line-height:1.6; color:var(--text);">
-                        Thank you for reaching out to Parmigiano On Wheels. We’ll get back to you soon to discuss your event
+                        Thank you for reaching out to Parmigiano On Wheels. We’ll get back to you soon to discuss your
+                        event
                         and bring an unforgettable Italian dining experience to your table.
                     </p>
                 </form>

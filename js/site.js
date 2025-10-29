@@ -76,6 +76,24 @@ function initHeaderScripts() {
     }
 }
 
+// ------------------- CONTACT FORM -------------------
+function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    // Send form data to Netlify
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+    })
+        .then(() => {
+            document.getElementById("form-content").style.display = "none";
+            document.getElementById("thank-you").style.display = "block";
+        })
+        .catch(() => alert("Something went wrong. Please try again."));
+}
+
 document.addEventListener('DOMContentLoaded', loadPartials);
 
 
