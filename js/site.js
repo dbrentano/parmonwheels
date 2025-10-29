@@ -78,44 +78,4 @@ function initHeaderScripts() {
 
 document.addEventListener('DOMContentLoaded', loadPartials);
 
-// ------------------- VIDEO CONTROLS -------------------
-// ------------------- VIDEO CONTROLS (always hide on play, show on pause) -------------------
-(function initVideoOverlay() {
-    const containers = document.querySelectorAll('.video-container');
-    if (!containers.length) return;
-
-    const pauseOthers = (except) => {
-        document.querySelectorAll('.video-player').forEach(v => {
-            if (v !== except) {
-                v.pause();
-                const b = v.closest('.video-container')?.querySelector('.play-btn');
-                if (b) b.classList.remove('hidden');
-            }
-        });
-    };
-
-    containers.forEach(container => {
-        const video = container.querySelector('.video-player');
-        const btn = container.querySelector('.play-btn');
-        if (!video || !btn) return;
-
-        // Clicking play button starts video
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            pauseOthers(video);
-            video.play().then(() => btn.classList.add('hidden'));
-        });
-
-        // When video starts playing (no matter how)
-        video.addEventListener('play', () => {
-            pauseOthers(video);
-            btn.classList.add('hidden');
-        });
-
-        // When paused or ended (no matter how)
-        video.addEventListener('pause', () => btn.classList.remove('hidden'));
-        video.addEventListener('ended', () => btn.classList.remove('hidden'));
-    });
-})();
-
 
