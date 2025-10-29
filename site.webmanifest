@@ -1,0 +1,19 @@
+{
+    "name": "Parmigiano On Wheels",
+    "short_name": "Parm On Wheels",
+    "icons": [
+        {
+            "src": "/img/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#9A2C00",
+    "background_color": "#E5E0DA",
+    "display": "standalone"
+}
