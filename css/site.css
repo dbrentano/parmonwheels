@@ -1015,3 +1015,110 @@ header.nav.hide-header {
 }
 
 /* ABOUT US PAGE END */
+
+/* GALLERY PAGE START */
+
+.gallery-section {
+    background: var(--page-bg);
+    padding: 150px 10% 100px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: var(--header-bg);
+}
+
+/* GRID LAYOUT */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    justify-items: center;
+}
+
+/* IMAGES */
+.gallery-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* VIDEOS SECTION */
+.videos-section {
+    background: var(--page-bg);
+    padding: 0px 5% 100px;
+    text-align: center;
+    margin-top: -70px;
+}
+
+/* GRID LAYOUT */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+/* VIDEO PLAYER STYLING */
+.video-player {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-player:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 0px 5% 40px;
+    }
+
+    .gallery-title {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gallery-img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .videos-section {
+        padding: 80px 20px 40px;
+    }
+
+    .videos-grid {
+        gap: 25px;
+    }
+
+    .video-player {
+        max-width: 100%;
+    }
+}
+
+
+
+/* GALLERY PAGE END */
